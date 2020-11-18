@@ -20,7 +20,7 @@ html {
 #first {
   display: block;
   width: 400px;
-  height: 400px;
+  height: 500px;
   margin-left: auto;
   margin-right: auto;
   padding: 10px 50px 0;
@@ -36,7 +36,19 @@ html {
 #second {
   display: block;
   width: 400px;
-  height: 400px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 50px 0;
+  border-radius: 20%;
+  background-color: white;
+  opacity: 1;
+}
+
+#third {
+  display: block;
+  width: 700px;
+  height: 700px;
   margin-left: auto;
   margin-right: auto;
   padding: 10px 50px 0;
@@ -55,6 +67,10 @@ table {
   column-width: 100%;
   vertical-align: middle;
   align-content: center;
+}
+
+a {
+text-decoration: none;
 }
 
 a:hover {
@@ -139,12 +155,10 @@ body {
 }
 
 nav {
-  display: grid;
-  grid-template-areas: "nav-links accounts";
-  width: 60%;
+  
   margin: auto;
-  margin-top: 3%;
-  gap: 40px;
+  margin-top: 10%;
+text-indent: 60px;
 }
 
 li {
@@ -227,7 +241,7 @@ img {
 }
 
 .read-more-btn:hover {
-  background-color: brown;
+  background-color: #a6a6a6;
 }
 
 .right-content img {
