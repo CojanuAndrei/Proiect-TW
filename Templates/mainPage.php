@@ -13,6 +13,7 @@
 background-image: url("Pictures/mountains.jpg");
 line-height: 1.8;
 background-size: cover;
+background-repeat: no-repeat;
 }
 
 .btn{

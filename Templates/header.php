@@ -2,10 +2,10 @@
    
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/c8bd6986d8.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
 <link rel="stylesheet" href="style.css">
 <style type = "text/css">
 
@@ -17,7 +17,7 @@ background-size: cover;}
 
 
 .brand{
-backgound: #ff1a1a !important;
+background: #ff1a1a !important;
 padding: 30px 32px;
 }
 
@@ -37,7 +37,9 @@ border: none;
 font-size: 16px;
 font-family: sans-serif;
 }
-
+:hover{
+    transition: 0.4s;
+}
 </style>
 </head>
 
