@@ -38,6 +38,9 @@ h1 {
 <body class="background">
 <header class="w3-container w3-center" style="padding:250px 20px">
 <h1> A good idea becomes a great idea when you let it out.</h1>
-<a href = "#" button class="w3-button w3-theme-d3 w3-padding-32 w3-large w3-margin-top" style = "position: relative; right:65px">Start now!</button></a>
-<a href = "#" button class="w3-button w3-theme-d3 w3-padding-32 w3-large w3-margin-top" style = "position: relative; left:65px">Just passing by...</button></a>
+
+	<a href = "login.html"><button class="w3-button w3-theme-d3 w3-padding-40 w3-large w3-margin-top">Start now!</button></a>
+
+	<a href = "readonly.php"><button class="w3-button w3-theme-d3 w3-padding-40 w3-large w3-margin-top">Just passing by...</button></a>
+</header>
 </body>
