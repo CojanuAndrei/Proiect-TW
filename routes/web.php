@@ -13,32 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*
-Route::get('/hello', function () {
-    //return view('welcome');
-    return 'Hello World';
+Route::get('/', function () {
+    return view('welcome');
 });
 
-Route::get('/mainPage', function(){
-    return view('templates.mainPage');
-
-});
-
-Route::get('/index', function(){
-    return view('pages.index');
-
-});
-
-Route::get('/header', function(){
-    return view('templates.header');
-
-});
-*/
-Route::get('/', 'PagesController@index');
-Route::get('/login', 'PagesController@login');
-Route::get('/register', 'PagesController@register');
-Route::get('/newsfeed', 'PagesController@newsfeed');
-Route::get('/readonly', 'PagesController@readonly');
-Route::get('/article', 'PagesController@article');
-Route::get('/content', 'PagesController@content');
-//Route::get('/mainPage', 'PagesController@mainPage');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
