@@ -1,14 +1,15 @@
+<!DOCTYPE html>
 
+<html>
 
-    <head>
+<head>
         <title>Blogger</title>
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     </head>
 
     <body>
-       
-        <!-- Navbar -->
-        <!-- <div class="w3-top">
+        <!-- Navbar
+        <div class="w3-top">
             <div class="w3-bar w3-theme-d2 w3-large">
                 <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2"  href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
                 <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fas fa-user-circle"></i>My Profile</a>
@@ -24,11 +25,10 @@
                         <a href="#" class="w3-bar-item w3-button">Lifestyle</a>
                     </div>
                 </div>
-                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="New_post"><i class="far fa-newspaper"></i> Write your thoughts</a>
             </div>
-        </div> -->
-        <!-- Navbar on small screens -->
-        <!-- <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+        </div>
+         Navbar on small screens 
+         <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
           <a href="#" class="w3-bar-item w3-button w3-padding-large">Recent</a>
           <a href="#" class="w3-bar-item w3-button w3-padding-large">Most Viewed</a>
           <a href="#" class="w3-bar-item w3-button w3-padding-large">Best of Last Month</a>
@@ -40,20 +40,19 @@
                         <a href="#" class="w3-bar-item w3-button">Lifestyle</a>
                     </div>
             </div>
-        </div> -->
-
-        <section class="w3-padding-48 header">
+        </div>  -->
+        <section class="header">
             <h1>Be inspired</h1>
             <a href="{{ route('profile.show') }}" class="text-sm text-gray-700 underline">Go to profile</a>
             <a href="{{ url('/content') }}" class="text-sm text-gray-700 underline">Add content</a>
-            
+
         </section>
         <hr>
         <section class="content-container">
             <div class="left-content">
                 <h2>Article</h2>
                 <div class="article">
-                    <img src ="img/mountains.jpg" alt="Image">
+                <img src="img/mountains.jpg">
                     
                 
                 <h3>Heading</h3>
@@ -62,16 +61,8 @@
                 </div>
             </div>
         </section>
-    <script>
-    function openNav() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else { 
-        x.className = x.className.replace(" w3-show", "");
-    }
-    }
-    </script>
     </body>
 
-  
+
+
+</html>
