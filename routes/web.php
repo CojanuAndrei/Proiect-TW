@@ -17,6 +17,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/newsfeed', function () {
+    return view('newsfeed');
+});
+
+Route::get('/content', function () {
+    return view('content');
+});
+
+Route::get('/article', function () {
+    return view('article');
+});
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
