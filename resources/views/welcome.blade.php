@@ -210,8 +210,8 @@
             <title>Blogger</title>
 
             <style type = "text/css">
-                .background{
-            background-image: url("pictures/mountains.jpg");
+            .background{
+            background-image: url("img/mountains.jpg");
             line-height: 1.8;
             background-size: cover;
             background-repeat: no-repeat;
@@ -236,8 +236,6 @@
             </style>
         </head>
         <body class="background">
-            
-
             <header class="w3-container w3-center" style="padding:250px 20px">
             <h1> A good idea becomes a great idea when you let it out.</h1>
             @if (Route::has('login'))
