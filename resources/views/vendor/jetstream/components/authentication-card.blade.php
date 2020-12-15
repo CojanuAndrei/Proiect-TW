@@ -1,4 +1,4 @@
-<div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 "  style="background-color:#000;background-image: url('images/mountains.jpg');background-size: cover;background-repeat: no-repeat">
+<div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 "  style="background-image: url('images/mountains.jpg');background-size: cover;background-repeat: no-repeat">
     <div>
         {{ $logo }}
     </div>
