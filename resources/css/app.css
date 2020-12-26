@@ -1,9 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
-@import "/resources/css/style.css";
-
+@import "/public/css/app.css";
 #bg {
     background: url("/public/img/mountains.jpg");
     line-height: 1.8;

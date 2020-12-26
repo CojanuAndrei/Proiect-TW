@@ -158,7 +158,7 @@
                     </x-jet-responsive-nav-link>
                 </form>
 
-                <!-- Team Management -->
+                <!-- Team Management 
                 @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
                     <div class="border-t border-gray-200"></div>
 
@@ -185,7 +185,7 @@
                     @foreach (Auth::user()->allTeams() as $team)
                         <x-jet-switchable-team :team="$team" component="jet-responsive-nav-link" />
                     @endforeach
-                @endif
+                @endif-->
             </div>
         </div>
     </div>
