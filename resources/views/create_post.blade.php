@@ -25,6 +25,7 @@
                                 <x-jet-button>
                                     {{__('Create Post')}}
                                 </x-jet-button>
+                                <input type = "hidden" value ="{{ Session:: token() }}" name="_token">
                             </div>
                         </form>
                     </div>
