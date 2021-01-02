@@ -19,6 +19,9 @@
                     <div class="mt-6 text-gray-500">
                         <form action="{{ route('post.create') }}" method="post">
                             <div class="form-group">
+                                <textarea class="form-control form-textarea" style="resize:none; width:100%;" name="title" id="new-post" rows="1" placeholder="Write your title..."></textarea>
+                            </div>
+                            <div class="form-group">
                                 <textarea class="form-control form-textarea" style="resize:none; width:100%;" name="body" id="new-post" rows="5" placeholder="Write your thoughts..."></textarea>
                             </div>
                             <div class="flex items-center justify-end">
