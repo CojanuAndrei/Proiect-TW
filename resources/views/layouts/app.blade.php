@@ -20,19 +20,23 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen "   style="background-image: url('../images/blur-mountains.jpg');background-size: cover;background-repeat: no-repeat">
-            @livewire('navigation-dropdown')
+        <div class="min-h-screen blur-bg">
+            <div class="fixed w-full">
+                @livewire('navigation-dropdown')
 
-            <!-- Page Heading -->
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
-
+                <!-- Page Heading -->
+                <header class="bg-white shadow">
+                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                        {{ $header }}
+                    </div>
+                </header>
+            </div>
+            
             <!-- Page Content -->
-            <main>
-                {{ $slot }}
+            <main class="pt-32">
+                <div>
+                    {{ $slot }}
+                </div>
             </main>
         </div>
 
