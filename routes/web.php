@@ -32,3 +32,13 @@ Route::get('/article', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/create-post', function () {
+    return view('create_post');
+})->name('create-post');
+
+Route::post('/createpost', [
+    'uses'=>'PostController@postCreatePost',
+    'as'=>'post.create',
+    'middleware' => 'auth'
+]);

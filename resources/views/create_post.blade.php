@@ -1,0 +1,36 @@
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Create Post') }}
+        </h2>
+    </x-slot>
+
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                <div class="p-6 sm:px-20 bg-white border-b border-gray-200">
+                    <div class="flex items-center ">
+                        <img class="h-10 w-10 rounded-full" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
+                        
+                        <div class=" ml-8 text-2xl">
+                            {{Auth::user()->name}}
+                        </div>
+                    </div>
+                    <div class="mt-6 text-gray-500">
+                        <form action="{{ route('post.create') }}" method="post">
+                            <div class="form-group">
+                                <textarea class="form-control form-textarea" style="resize:none; width:100%;" name="body" id="new-post" rows="5" placeholder="Write your thoughts..."></textarea>
+                            </div>
+                            <div class="flex items-center justify-end">
+                                <x-jet-button>
+                                    {{__('Create Post')}}
+                                </x-jet-button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</x-app-layout>
