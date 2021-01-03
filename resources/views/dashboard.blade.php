@@ -71,10 +71,23 @@
                                         {{__('Submit')}}
                                     </x-jet-button>
                                     <input type = "hidden" value ="{{ Session:: token() }}" name="_token">
-
                                 </div>
                             </form>
-
+                            <div class="flex justify-between">
+                                <div class="order-1">
+                                    <h4 class="font-semibold text-m text-gray-800 leading-tight p-6 ">
+                                        Share:
+                                    </h4>
+                                </div>
+                                <div class="order-2 flex items-center">
+                                    <a href="#facebook" class="w-12 p-2">
+                                        <x-fab-facebook-square />
+                                    </a>
+                                    <a href="#RSS" class="w-12 p-2">
+                                        <x-fas-rss-square />
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 

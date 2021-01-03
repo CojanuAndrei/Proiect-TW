@@ -72,6 +72,7 @@
 
                                     @endif
                                 @endforeach
+                                <!--Submit comment-->
                                 <form action="{{ route('comment.create') }}" method="post" class="flex justify-between">
                                     <div class="order-1 form-group items-center flex-grow p-2">
                                         <textarea class="form-control form-textarea" style="resize:none; width:100%;" name="content" id="new-post" rows="1" placeholder="What do you think about it..." required></textarea>
@@ -85,7 +86,22 @@
 
                                     </div>
                                 </form>
-
+                                <!--Share-->
+                                <div class="flex justify-between">
+                                    <div class="order-1">
+                                        <h4 class="font-semibold text-m text-gray-800 leading-tight p-6 ">
+                                            Share:
+                                        </h4>
+                                    </div>
+                                    <div class="order-2 flex items-center">
+                                        <a href="#facebook" class="w-12 p-2">
+                                            <x-fab-facebook-square />
+                                        </a>
+                                        <a href="#RSS" class="w-12 p-2">
+                                            <x-fas-rss-square />
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b05ff22976e80b1fcdbbc771450f6183",
+    "content-hash": "fda09d529efe5ca6fecbc32283226377",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -422,16 +422,16 @@
         },
         {
             "name": "davidhsianturi/blade-bootstrap-icons",
-            "version": "v0.6.0",
+            "version": "v0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/davidhsianturi/blade-bootstrap-icons.git",
-                "reference": "67a84782753beedaf168012982b5e60da39a1bc7"
+                "reference": "ccd56b678d7337b6ae213ef46ff6de5d0f37ed25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidhsianturi/blade-bootstrap-icons/zipball/67a84782753beedaf168012982b5e60da39a1bc7",
-                "reference": "67a84782753beedaf168012982b5e60da39a1bc7",
+                "url": "https://api.github.com/repos/davidhsianturi/blade-bootstrap-icons/zipball/ccd56b678d7337b6ae213ef46ff6de5d0f37ed25",
+                "reference": "ccd56b678d7337b6ae213ef46ff6de5d0f37ed25",
                 "shasum": ""
             },
             "require": {
@@ -477,9 +477,9 @@
             ],
             "support": {
                 "issues": "https://github.com/davidhsianturi/blade-bootstrap-icons/issues",
-                "source": "https://github.com/davidhsianturi/blade-bootstrap-icons/tree/v0.6.0"
+                "source": "https://github.com/davidhsianturi/blade-bootstrap-icons/tree/v0.7.0"
             },
-            "time": "2020-12-14T12:06:13+00:00"
+            "time": "2020-12-28T09:16:48+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
