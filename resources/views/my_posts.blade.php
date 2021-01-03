@@ -15,23 +15,24 @@
                     <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                         <div class="p-6 sm:px-20 bg-white border-b border-gray-200">
                             <!--author-->
-                            <div class="flex items-center border-2 p-2">
-                                <img class="h-10 w-10 rounded-full" src="{{$post->user->profile_photo_url }}" alt="{{$post->user->name}}" />
+                            <div class="flex justify-between border-2 p-2">
+                                <div class="order-1 flex items-center">
+                                    <img class="h-10 w-10 rounded-full" src="{{$post->user->profile_photo_url }}" alt="{{$post->user->name}}" />
                             
-                                <div class=" ml-8 text-l">
-                                    <!-- {{Auth::user()->name}} -->
-                                    {{$post->user->name}}
-                                </div>
-                                <div class="flex justify-items-end items-center">
-                                    <div class="">
-                                        <a href="#edit" class="w-6">
-                                            <x-feathericon-edit />
-                                        </a>
-                                        <a href="#delete" class="w-6">
-                                            <x-heroicon-s-x />
-                                        </a>
+                                    <div class=" ml-8 text-l">
+                                        <!-- {{Auth::user()->name}} -->
+                                       {{$post->user->name}}
                                     </div>
                                 </div>
+                                <div class="order-2 flex items-center">
+                                    <a href="#edit" class="w-6">
+                                        <x-feathericon-edit />
+                                    </a>
+                                    <a href="#delete" class="w-6">
+                                        <x-heroicon-s-x />
+                                    </a>
+                                </div>
+
                             </div>
                             <div class="p-2">
                                 <!--title-->
@@ -54,29 +55,29 @@
                                 </h4>
                                 @foreach($comments as $comment)
                                     @if($post->id==$comment->id_post)
-                                <div class="p-6">
-                                    <div class="border-l-2">
-                                        <div class="flex items-center border-b-2 p-2">
-                                            <img class="h-6 w-6 rounded-full" src="{{ $comment->user->profile_photo_url }}" alt="{{ $comment->user->name }}" />
-                                        
-                                            <div class=" ml-8 text-m">
-                                            {{$comment->user->name}}
+                                        <div class="p-6">
+                                            <div class="border-l-2">
+                                                <div class="flex items-center border-b-2 p-2">
+                                                    <img class="h-6 w-6 rounded-full" src="{{ $comment->user->profile_photo_url }}" alt="{{ $comment->user->name }}" />
+                                                
+                                                    <div class=" ml-8 text-m">
+                                                    {{$comment->user->name}}
+                                                    </div>
+                                                </div>
+                                                <div class="p-6 bottom-b-2 text-sm">
+                                                {{$comment->content}}
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="p-6 bottom-b-2 text-sm">
-                                        {{$comment->content}}
-                                        </div>
-                                    </div>
-                                </div>
 
-                                @endif
+                                    @endif
                                 @endforeach
-                                <form action="{{ route('comment.create') }}" method="post">
-                                    <div class="form-group">
+                                <form action="{{ route('comment.create') }}" method="post" class="flex justify-between">
+                                    <div class="order-1 form-group items-center flex-grow p-2">
                                         <textarea class="form-control form-textarea" style="resize:none; width:100%;" name="content" id="new-post" rows="1" placeholder="What do you think about it..." required></textarea>
                                         <input type = "hidden" value ="{{ $post->id }}" name="id_post">
                                     </div>
-                                    <div class="flex items-center justify-end">
+                                    <div class="order-2 flex items-center justify-end">
                                         <x-jet-button>
                                             {{__('Submit')}}
                                         </x-jet-button>

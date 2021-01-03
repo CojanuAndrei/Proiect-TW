@@ -61,12 +61,12 @@
 
                             @endif
                             @endforeach
-                            <form action="{{ route('comment.create') }}" method="post">
-                                <div class="form-group">
+                            <form action="{{ route('comment.create') }}" method="post" class="flex justify-between">
+                                <div class="order-1 form-group items-center flex-grow p-2">
                                     <textarea class="form-control form-textarea" style="resize:none; width:100%;" name="content" id="new-post" rows="1" placeholder="What do you think about it..." required></textarea>
                                     <input type = "hidden" value ="{{ $post->id }}" name="id_post">
                                 </div>
-                                <div class="flex items-center justify-end">
+                                <div class="order-2 flex items-center justify-end">
                                     <x-jet-button>
                                         {{__('Submit')}}
                                     </x-jet-button>
