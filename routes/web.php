@@ -56,4 +56,8 @@ Route::post('/createcomment', [
     'middleware' => 'auth'
 ]);
 
-
+Route::get('/my_posts', [
+    'uses'=>'PostController@getMyPosts',
+    'as'=>'my-posts',
+    'middleware' => 'auth'
+]);

@@ -18,6 +18,13 @@ class PostController extends Controller
         $comments = Comment::all();
         return view('dashboard',['posts'=> $posts, 'comments'=> $comments]);
     }
+    
+    public function getMyPosts()
+    {
+        $posts = Post::all();
+        $comments = Comment::all();
+        return view('my_posts',['posts'=> $posts, 'comments'=> $comments]);
+    }
 
 
     public function postCreatePost(Request $request)
