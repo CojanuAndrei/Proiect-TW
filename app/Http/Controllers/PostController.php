@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Comment;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -14,7 +15,8 @@ class PostController extends Controller
     public function getDashboard()
     {
         $posts = Post::all();
-        return view('dashboard',['posts'=> $posts]);
+        $comments = Comment::all();
+        return view('dashboard',['posts'=> $posts, 'comments'=> $comments]);
     }
 
 

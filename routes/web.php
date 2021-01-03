@@ -50,4 +50,10 @@ Route::get('/dashboard', [
     'middleware' => 'auth'
 ]);
 
-// Route::get( '/dashboard', 'PostController@show' );
+Route::post('/createcomment', [
+    'uses'=>'CommentController@postCreateComment',
+    'as'=>'comment.create',
+    'middleware' => 'auth'
+]);
+
+
