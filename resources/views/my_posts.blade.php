@@ -87,7 +87,7 @@
                                     </div>
                                 </form>
                                 <!--Share-->
-                                <div class="flex justify-between">
+                                <div class="flex justify-between border-t-2">
                                     <div class="order-1">
                                         <h4 class="font-semibold text-m text-gray-800 leading-tight p-6 ">
                                             Share:
