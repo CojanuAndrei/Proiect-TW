@@ -31,9 +31,10 @@
                                 <input type = "hidden" value ="{{ Session:: token() }}" name="_token">
                             </div>
                         </form>
+                        @include('includes.message-block')
                     </div>
                 </div>
-                
+               
             </div>
         </div>
     </div>
