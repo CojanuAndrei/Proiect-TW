@@ -30,6 +30,7 @@
                                 </x-jet-button>
                                 <input type = "hidden" value ="{{ Session:: token() }}" name="_token">
                             </div>
+                            <input type = "hidden" value = "{{ Session::token() }}" name = "_token"> 
                         </form>
                     </div>
                 </div>

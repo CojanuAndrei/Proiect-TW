@@ -23,5 +23,6 @@ class PostController extends Controller
             $message = 'Post successfully created!';
         }
         return redirect()->route('dashboard')->with(['message' => $message]);
+
     }
 }

@@ -16,7 +16,10 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+<<<<<<< Updated upstream
             $table->text('title');
+=======
+>>>>>>> Stashed changes
             $table->text('body');
             $table->integer('id_user');
         });
