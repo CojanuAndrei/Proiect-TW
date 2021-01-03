@@ -38,6 +38,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/create-post', function ()
     return view('create_post');
 })->name('create-post');
 
+Route::middleware(['auth:sanctum', 'verified'])->get('/individual-post', function () {
+    return view('individual_post');
+})->name('individual-post');
+
+
 Route::post('/createpost', [
     'uses'=>'PostController@postCreatePost',
     'as'=>'post.create',
@@ -60,4 +65,10 @@ Route::get('/my_posts', [
     'uses'=>'PostController@getMyPosts',
     'as'=>'my-posts',
     'middleware' => 'auth'
+]);
+
+Route::get('/deletepost/{post_id}', [
+    'uses' => 'PostController@getDeletePost',
+    'as' => 'post.delete',
+    'middleware' =>'auth'
 ]);

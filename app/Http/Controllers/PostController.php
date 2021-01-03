@@ -14,18 +14,35 @@ class PostController extends Controller
    
     public function getDashboard()
     {
-        $posts = Post::all();
+        $posts = Post::all()->sortByDesc('created_at');
         $comments = Comment::all();
         return view('dashboard',['posts'=> $posts, 'comments'=> $comments]);
     }
     
     public function getMyPosts()
     {
-        $posts = Post::all();
+        $posts = Post::all()->sortByDesc('created_at');
         $comments = Comment::all();
         return view('my_posts',['posts'=> $posts, 'comments'=> $comments]);
     }
 
+
+    public function getDeletePost($post_id)
+    {
+        $post = Post::where('id', $post_id)->first();
+        $post -> delete();
+        $message = 'Successfully deleted';
+        return redirect()->route('dashboard')->with(['message' => $message]);
+    }
+
+
+
+    public function getIndividualPost($post_id)
+    {
+        $post = Post::where('id', $post_id)->first();
+        
+        //return redirect()->route('dashboard')->with(['message' => $message]);
+    }
 
     public function postCreatePost(Request $request)
     {

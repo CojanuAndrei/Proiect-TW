@@ -1,14 +1,12 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('What I\'ve posted...') }}
+            {{ __('What I want to share...') }}
         </h2>
     </x-slot>
-   
-    <!-- Articolulllll -->
 
 
-    @foreach($posts as $post)
+    {{-- @foreach($posts as $post)
         @if($post->user_id==Auth::user()->id)
             <article> 
                 <div class="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -89,12 +87,17 @@
                                 <!--Share-->
                                 <div class="flex justify-between border-t-2">
                                     <div class="order-1">
-                                        
+                                        <h4 class="font-semibold text-m text-gray-800 leading-tight p-6 ">
+                                            Share:
+                                        </h4>
                                     </div>
                                     <div class="order-2 flex items-center">
-                                        <x-jet-nav-link href="{{ route('individual-post') }}" :active="request()->routeIs('individual-post')">
-                                            {{ __('Would you like to share this post?') }}
-                                        </x-jet-nav-link>
+                                        <a href="#facebook" class="w-12 p-2">
+                                            <x-fab-facebook-square />
+                                        </a>
+                                        <a href="#RSS" class="w-12 p-2">
+                                            <x-fas-rss-square />
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -104,30 +107,8 @@
                 </div>
             </article>
         @endif
-    @endforeach
+    @endforeach --}}
    
-    <article> 
-        <div class="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                    <div class="flex justify-between  border-t-2">
-                        <div class="order-1">
-                            <h4 class="font-semibold text-m text-gray-800 leading-tight p-6 ">
-                                Did you like it? Don't forget to share it!
-                                
-                            </h4>
-                        </div>
 
-                    <div class="order-2 flex items-center">
-                    <a href="#Facebook" class="w-12 p-2">
-                        <x-fab-facebook-square />
-                    </a>
-                    <a href="#RSS" class="w-12 p-2">
-                        <x-fas-rss-square />
-                    </a>
-                </div>
-                </div>
-            
-        </div>
-    </article>
-   
+
 </x-app-layout>
