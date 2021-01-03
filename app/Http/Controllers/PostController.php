@@ -19,10 +19,11 @@ class PostController extends Controller
         $post = new Post();
         $post->body = $request['body'];
         $message = 'There was an error';
-        if ($request->user()->posts()->save($post)) {
+       if ($request->user()->posts()->save($post)) {
             $message = 'Post successfully created!';
         }
         return redirect()->route('dashboard')->with(['message' => $message]);
+
 
     }
 }
