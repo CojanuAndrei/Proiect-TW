@@ -98,10 +98,6 @@
     <article> 
         <div class="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                
-
-
-
                     <div class="flex justify-between  border-t-2">
                         <div class="order-1">
                             <h4 class="font-semibold text-m text-gray-800 leading-tight p-6 ">
@@ -111,12 +107,29 @@
                         </div>
 
                     <div class="order-2 flex items-center">
-                    <a href="#Facebook" class="w-12 p-2">
+
+
+                         <!-- Share it on Facebook -->
+                        <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2F127.0.0.1%3A8000%2Fdashboard&layout=button&size=large&width=77&height=28&appId" 
+                        width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" 
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+                        <!-- Share it on Twitter -->
+                        <a class="twitter-share-button" href="http://127.0.0.1:8000/dashboard" data-size="large">Tweet</a>
+                        <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="http://127.0.0.1:8000/my_posts"></a></p></blockquote> 
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+                        <!-- For space between button and the white container -->
+                        <a href="#Facebook" class="w-12 p-2">
+                            
+                        </a> 
+
+                    {{-- <a href="#Facebook" class="w-12 p-2">
                         <x-fab-facebook-square />
-                    </a>
+                    </a> 
                     <a href="#RSS" class="w-12 p-2">
                         <x-fas-rss-square />
-                    </a>
+                    </a> --}}
                 </div>
                 </div>
             
