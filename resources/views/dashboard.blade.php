@@ -108,21 +108,18 @@
 
                     <div class="order-2 flex items-center">
 
-
+                        <div class="order-1 p-4">
                          <!-- Share it on Facebook -->
                         <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2F127.0.0.1%3A8000%2Fdashboard&layout=button&size=large&width=77&height=28&appId" 
                         width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" 
                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-
+                        </div>
+                        <div class="order-2 p-4">
                         <!-- Share it on Twitter -->
-                        <a class="twitter-share-button" href="http://127.0.0.1:8000/dashboard" data-size="large">Tweet</a>
+                        <a class="twitter-share-button" href="http://127.0.0.1:8000/dashboard" data-size="large" class="">Tweet</a>
                         <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="http://127.0.0.1:8000/my_posts"></a></p></blockquote> 
                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-                        <!-- For space between button and the white container -->
-                        <a href="#Facebook" class="w-12 p-2">
-                            
-                        </a> 
+                        </div>
 
                     {{-- <a href="#Facebook" class="w-12 p-2">
                         <x-fab-facebook-square />
