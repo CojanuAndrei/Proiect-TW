@@ -80,9 +80,9 @@
                                 
                                <div class="order-2 flex items-center">
 
-                                     <x-jet-nav-link href="{{ route('individual-post') }}" :active="request()->routeIs('individual-post')">
+                                      <x-jet-nav-link href="{{ route('individual_post', ['post_id' => $post->id]) }}" :active="request()->routeIs('individual_post')">
                                         {{ __('Would you like to share this post?') }}
-                                    </x-jet-nav-link>
+                                    </x-jet-nav-link> 
                                 </div> 
                             </div>
                         </div>

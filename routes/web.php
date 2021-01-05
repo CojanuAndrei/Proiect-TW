@@ -38,9 +38,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/create-post', function ()
     return view('create_post');
 })->name('create-post');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/individual-post', function () {
-    return view('individual_post');
-})->name('individual-post');
+// Route::middleware(['auth:sanctum', 'verified'])->get('/individual-post', function () {
+//     return view('individual_post');
+// })->name('individual-post');
 
 
 Route::post('/createpost', [
@@ -71,4 +71,22 @@ Route::get('/deletepost/{post_id}', [
     'uses' => 'PostController@getDeletePost',
     'as' => 'post.delete',
     'middleware' =>'auth'
+]);
+
+Route::get('/individual_post/{post_id}', [
+    'uses' => 'PostController@getIndividualPost',
+    'as' => 'individual_post',
+    'middleware' =>'auth'
+]);
+
+Route::get('/editpost/{post_id}', [
+    'uses' => 'PostController@getEditPost',
+    'as' => 'post.edit',
+    'middleware' =>'auth'
+]);
+
+Route::post('/updatepost/{post_id}', [
+    'uses'=>'PostController@updatePost',
+    'as'=>'post.update',
+    'middleware' => 'auth'
 ]);

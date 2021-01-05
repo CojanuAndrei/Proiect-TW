@@ -6,8 +6,9 @@
     </x-slot>
 
 
-    {{-- @foreach($posts as $post)
+     @foreach($posts as $post)
         @if($post->user_id==Auth::user()->id)
+           @if($post->id==id_post)
             <article> 
                 <div class="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
@@ -22,14 +23,15 @@
                                        {{$post->user->name}}
                                     </div>
                                 </div>
-                                <div class="order-2 flex items-center">
+
+                                {{-- <div class="order-2 flex items-center">
                                     <a href="#edit" class="w-6">
                                         <x-feathericon-edit />
                                     </a>
                                     <a href="{{ route('post.delete', ['post_id' => $post->id]) }}" class="w-6">
                                         <x-heroicon-s-x />
                                     </a>
-                                </div>
+                                </div> --}}
 
                             </div>
                             <div class="p-2">
@@ -107,7 +109,8 @@
                 </div>
             </article>
         @endif
-    @endforeach --}}
+        @endif
+    @endforeach 
    
 
 
