@@ -24,7 +24,7 @@
                                        {{$post->user->name}}
                                     </div>
                                 </div>
-                                <div class="order-2 flex items-center">
+                                <div class="order-3 flex items-center">
                                     <a href="{{ route('post.edit', $post->id) }}" class="w-6">
                                         <x-feathericon-edit />
                                     </a>
@@ -75,7 +75,7 @@
                                     @endif
                                 @endforeach
                                 <!--Submit comment-->
-                                <form action="{{ route('comment.create') }}" method="post" class="flex justify-between">
+                                <form action="{{ route('comment.create') }}" method="post" class="flex justify-between  border-b-2">
                                     <div class="order-1 form-group items-center flex-grow p-2">
                                         <textarea class="form-control form-textarea" style="resize:none; width:100%;" name="content" id="new-post" rows="1" placeholder="What do you think about it..." required></textarea>
                                         <input type = "hidden" value ="{{ $post->id }}" name="id_post">
@@ -88,15 +88,10 @@
 
                                     </div>
                                 </form>
-                                <!--Share-->
-                                <div class="flex justify-between border-t-2">
-                                    <div class="order-1">
-                                        
-                                    </div>
-                                    <div class="order-2 flex items-center">
-                                        <x-jet-nav-link href="{{ route('individual_post', ['post_id' => $post->id]) }}" :active="request()->routeIs('individual_post')">
-                                            {{ __('Would you like to share this post?') }}
-                                        </x-jet-nav-link>
+                                
+                                <div class="flex items-center">
+                                    <div class=" ml-8 text-sm text-cool-gray-500">
+                                       {{$post->user->created_at}}
                                     </div>
                                 </div>
                             </div>
@@ -122,30 +117,19 @@
 
                     <div class="order-2 flex items-center">
 
-
-                        <!-- Share it on Facebook -->
-                        <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2F127.0.0.1%3A8000%2Fmy_posts&layout=button&size=large&width=77&height=28&appId" 
-                        width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" 
-                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-
-
+                        <div class="order-1 p-4">
+                            <!-- Share it on Facebook -->
+                            <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2F127.0.0.1%3A8000%2Fmy_posts&layout=button&size=large&width=77&height=28&appId" 
+                            width="90" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" 
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>
+                        <div class="order-2 p-4">
                         <!-- Share it on Twitter -->
                         <a class="twitter-share-button" href="http://127.0.0.1:8000/my_posts" data-size="large">Tweet</a>
                         <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="http://127.0.0.1:8000/my_posts"></a></p>  </blockquote> 
                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-                        <!-- For space between button and the white container -->
-                        <a href="#Facebook" class="w-12 p-2">
-                            
-                        </a> 
-
-                    {{-- <a href="#Facebook" class="w-12 p-2">
-                        <x-fab-facebook-square />
-                    </a> 
-                    <a href="#RSS" class="w-12 p-2">
-                        <x-fas-rss-square />
-                    </a> --}}
-                </div>
+                        </div>
+                    </div>
                 </div>
             
         </div>

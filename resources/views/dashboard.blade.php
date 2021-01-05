@@ -61,7 +61,7 @@
 
                             @endif
                             @endforeach
-                            <form action="{{ route('comment.create') }}" method="post" class="flex justify-between">
+                            <form action="{{ route('comment.create') }}" method="post" class="flex justify-between border-b-2">
                                 <div class="order-1 form-group items-center flex-grow p-2">
                                     <textarea class="form-control form-textarea" style="resize:none; width:100%;" name="content" id="new-post" rows="1" placeholder="What do you think about it..." required></textarea>
                                     <input type = "hidden" value ="{{ $post->id }}" name="id_post">
@@ -73,17 +73,11 @@
                                     <input type = "hidden" value ="{{ Session:: token() }}" name="_token">
                                 </div>
                             </form>
-                            <div class="flex justify-between  border-t-2">
-                                <div class="order-1">
-                                    
+                            
+                            <div class="flex items-center">
+                                <div class=" ml-8 text-sm text-cool-gray-500">
+                                   {{$post->user->created_at}}
                                 </div>
-                                
-                               <div class="order-2 flex items-center">
-
-                                      <x-jet-nav-link href="{{ route('individual_post', ['post_id' => $post->id]) }}" :active="request()->routeIs('individual_post')">
-                                        {{ __('Would you like to share this post?') }}
-                                    </x-jet-nav-link> 
-                                </div> 
                             </div>
                         </div>
                     </div>
