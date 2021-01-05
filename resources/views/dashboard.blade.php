@@ -73,7 +73,18 @@
                                     <input type = "hidden" value ="{{ Session:: token() }}" name="_token">
                                 </div>
                             </form>
-                            
+                            <div class="flex justify-between  border-t-2">
+                                <div class="order-1">
+                                    
+                                </div>
+                                
+                               <div class="order-2 flex items-center">
+
+                                      <x-jet-nav-link href="{{ route('individual_post', ['post_id' => $post->id]) }}" :active="request()->routeIs('individual_post')">
+                                        {{ __('Would you like to share this post?') }}
+                                    </x-jet-nav-link> 
+                                </div> 
+                            </div>
                         </div>
                     </div>
                 

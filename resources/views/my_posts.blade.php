@@ -25,7 +25,7 @@
                                     </div>
                                 </div>
                                 <div class="order-2 flex items-center">
-                                    <a href="#edit" class="w-6">
+                                    <a href="{{ route('post.edit', $post->id) }}" class="w-6">
                                         <x-feathericon-edit />
                                     </a>
                                     <div class="p-5">
@@ -94,7 +94,7 @@
                                         
                                     </div>
                                     <div class="order-2 flex items-center">
-                                        <x-jet-nav-link href="{{ route('individual-post') }}" :active="request()->routeIs('individual-post')">
+                                        <x-jet-nav-link href="{{ route('individual_post', ['post_id' => $post->id]) }}" :active="request()->routeIs('individual_post')">
                                             {{ __('Would you like to share this post?') }}
                                         </x-jet-nav-link>
                                     </div>

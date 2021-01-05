@@ -35,13 +35,40 @@ class PostController extends Controller
         return redirect()->route('dashboard')->with(['message' => $message]);
     }
 
-
-
     public function getIndividualPost($post_id)
     {
-        $post = Post::where('id', $post_id)->first();
+        //$post = Post::where('id', $post_id)->first();
+
+        $post = Post::find($post_id);
+        return view('individual_post', compact('post'));
         
         //return redirect()->route('dashboard')->with(['message' => $message]);
+    }
+
+    public function getEditPost($post_id)
+    {
+        $post = Post::find($post_id);
+        return view('edit_post', compact('post'));
+    }
+
+    public function updatePost(Request $request, $post_id)
+    {
+        //Valid
+        $this->validate($request, [
+            'body' => 'required|max:1000'
+        ]);
+
+
+        $post = Post::findOrFail($post_id);
+        $post->title = $request['title'];
+        $post->body = $request['body'];
+
+        $message = 'There was an error';
+       if ($request->user()->posts()->save($post)) {
+            $message = 'Post successfully created!';
+        }
+        
+        return redirect()->route('dashboard')->with(['message' => $message]);
     }
 
     public function postCreatePost(Request $request)
