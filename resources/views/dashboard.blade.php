@@ -74,9 +74,12 @@
                                 </div>
                             </form>
                             
-                            <div class="flex items-center">
-                                <div class=" ml-8 text-sm text-cool-gray-500">
-                                   {{$post->user->created_at}}
+                            <div class="flex items-center justify-between">
+                                <div class="order-1 ml-8 text-sm text-cool-gray-500">
+                                   Created at: {{$post->user->created_at}}
+                                </div>
+                                <div class="order-2 ml-8 text-sm text-cool-gray-500">
+                                    Updated at: {{$post->user->updated_at}}
                                 </div>
                             </div>
                         </div>
