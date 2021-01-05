@@ -28,6 +28,8 @@
                                     <a href="#edit" class="w-6">
                                         <x-feathericon-edit />
                                     </a>
+                                    <div class="p-5">
+                                    </div>
                                     <a href="{{ route('post.delete', ['post_id' => $post->id]) }}" class="w-6">
                                         <x-heroicon-s-x />
                                     </a>

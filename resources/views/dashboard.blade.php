@@ -100,7 +100,7 @@
                         <div class="order-1 p-4">
                          <!-- Share it on Facebook -->
                         <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2F127.0.0.1%3A8000%2Fdashboard&layout=button&size=large&width=77&height=28&appId" 
-                        width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" 
+                        width="90" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" 
                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                         </div>
                         <div class="order-2 p-4">
